@@ -1,407 +1,4 @@
-Microsoft Windows [Version 10.0.22631.3880]
-(c) Microsoft Corporation. All rights reserved.
 
-C:\Users\Junaid>sqlplus
-
-SQL*Plus: Release 23.0.0.0.0 - Production on Sat Jul 13 00:23:43 2024
-Version 23.4.0.24.05
-
-Copyright (c) 1982, 2024, Oracle.  All rights reserved.
-
-Enter user-name: junaid/unisoft@orclpdb
-Last Successful login time: Fri Jul 12 2024 18:49:59 +05:30
-
-Connected to:
-Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production
-Version 21.3.0.0.0
-
-SQL> set pages 120 line 120
-SQL> select * from cat;
-
-TABLE_NAME
-------------------------------------------------------------------------------------------------------------------------
-TABLE_TYPE
------------
-EMP_COPY_NEW
-TABLE
-
-BIN$5/q/cWneThuGiYpZPyYFgA==$0
-TABLE
-
-STUDENT_INFO
-TABLE
-
-EMP_COPY100
-TABLE
-
-EMP_COPY_INSERT
-TABLE
-
-EMP_COPY_INSERT2
-TABLE
-
-EMPLOYEES_INSERT
-TABLE
-
-CHILD100
-TABLE
-
-UNIQUE_TEST
-TABLE
-
-EMP
-TABLE
-
-PRODUCTS
-TABLE
-
-EMP_DEPTNO_10
-TABLE
-
-STUDENT2
-TABLE
-
-EMP_DEPTNO_20
-TABLE
-
-EMP_COL_NEW_NAME
-TABLE
-
-EMP_COL_NEW_NAME2
-TABLE
-
-ANNUAL_SALARY_REPORT
-TABLE
-
-EMP_COPY_STRUCTURE
-TABLE
-
-EMP_COPY_WITH_DEFAULTS
-TABLE
-
-EMP_COPY_WITH_CONS
-TABLE
-
-TRUNC_TEST
-TABLE
-
-TRUNC_TEEST1
-TABLE
-
-TRUNC_TEST1
-TABLE
-
-TRUNC_TEST2
-TABLE
-
-TRUNC_TEST_MIN_EXTENT
-TABLE
-
-TRUNC_TEST_PARENT
-TABLE
-
-TRUNC_TEST_CHILD
-TABLE
-
-EMPLOYEES_COPY
-TABLE
-
-EMP_DROP2
-TABLE
-
-PARENT1
-TABLE
-
-CHILD1
-TABLE
-
-EMP_COPY3
-TABLE
-
-JK_COPY_EMP
-TABLE
-
-STUDENT
-TABLE
-
-FACULTY
-TABLE
-
-FACULTY_COURSE
-TABLE
-
-ADMISSIONN
-TABLE
-
-PROJECTS
-TABLE
-
-EMPLOYEE_PROJECTS
-
-TABLE_NAME
-------------------------------------------------------------------------------------------------------------------------
-TABLE_TYPE
------------
-TABLE
-
-VOTERS
-TABLE
-
-ZAID1
-TABLE
-
-TEST134
-TABLE
-
-TEST135
-TABLE
-
-TEST136
-TABLE
-
-PARENT
-TABLE
-
-CHILD
-TABLE
-
-ITEMS
-TABLE
-
-ORDERS
-TABLE
-
-ORDER_ITEMS
-TABLE
-
-EMPLOYEES
-TABLE
-
-LONG_VS_CLOB
-TABLE
-
-VARCHAR2_TEST
-TABLE
-
-CHAR_TEST
-TABLE
-
-CHAR_VS_VARCHAR2
-TABLE
-
-CLOB3
-TABLE
-
-NVARCHAR_TEST
-TABLE
-
-NCLOB_TEST
-TABLE
-
-CHILD3
-TABLE
-
-NUM_TEST2
-TABLE
-
-DATE_TEST
-TABLE
-
-NUM_TEST
-TABLE
-
-TIMESTAMP_TEST
-TABLE
-
-TIMESTAMP_TEST2
-TABLE
-
-WEB_ORDERS
-TABLE
-
-SPORTS_SCHEDULE
-TABLE
-
-CANDIDATE
-TABLE
-
-CANDIDATE2
-TABLE
-
-LAB_TEST
-TABLE
-
-EMP_COPY_TR
-TABLE
-
-BINARY_TEST
-TABLE
-
-BFILEDEMO
-TABLE
-
-ALTER_TEST
-TABLE
-
-ALTER_EMP_COPY
-TABLE
-
-TABLE1
-TABLE
-
-DATE_VS_TS
-TABLE
-
-COLLEGE
-TABLE
-
-QUALIFICATION
-TABLE
-
-TABLE_NAME
-------------------------------------------------------------------------------------------------------------------------
-TABLE_TYPE
------------
-
-STREAM
-TABLE
-
-COUNTRY
-TABLE
-
-STATE
-TABLE
-
-CITY
-TABLE
-
-ENQUIRY_MASTER
-TABLE
-
-STAFF
-TABLE
-
-COURSE1
-TABLE
-
-COURSE
-TABLE
-
-EMP_COPY_UPDATE
-TABLE
-
-DEPT_COPY_UPDATE
-TABLE
-
-BIN$QugLmuWYRJGPwfK+WwhAdQ==$0
-TABLE
-
-EMP_COPY
-TABLE
-
-DEPT_COPY
-TABLE
-
-
-90 rows selected.
-
-SQL> col table_name for a30
-SQL> select * from cat;
-
-TABLE_NAME                     TABLE_TYPE
------------------------------- -----------
-EMP_COPY_NEW                   TABLE
-BIN$5/q/cWneThuGiYpZPyYFgA==$0 TABLE
-STUDENT_INFO                   TABLE
-EMP_COPY100                    TABLE
-EMP_COPY_INSERT                TABLE
-EMP_COPY_INSERT2               TABLE
-EMPLOYEES_INSERT               TABLE
-CHILD100                       TABLE
-UNIQUE_TEST                    TABLE
-EMP                            TABLE
-PRODUCTS                       TABLE
-EMP_DEPTNO_10                  TABLE
-STUDENT2                       TABLE
-EMP_DEPTNO_20                  TABLE
-EMP_COL_NEW_NAME               TABLE
-EMP_COL_NEW_NAME2              TABLE
-ANNUAL_SALARY_REPORT           TABLE
-EMP_COPY_STRUCTURE             TABLE
-EMP_COPY_WITH_DEFAULTS         TABLE
-EMP_COPY_WITH_CONS             TABLE
-TRUNC_TEST                     TABLE
-TRUNC_TEEST1                   TABLE
-TRUNC_TEST1                    TABLE
-TRUNC_TEST2                    TABLE
-TRUNC_TEST_MIN_EXTENT          TABLE
-TRUNC_TEST_PARENT              TABLE
-TRUNC_TEST_CHILD               TABLE
-EMPLOYEES_COPY                 TABLE
-EMP_DROP2                      TABLE
-PARENT1                        TABLE
-CHILD1                         TABLE
-EMP_COPY3                      TABLE
-JK_COPY_EMP                    TABLE
-STUDENT                        TABLE
-FACULTY                        TABLE
-FACULTY_COURSE                 TABLE
-ADMISSIONN                     TABLE
-PROJECTS                       TABLE
-EMPLOYEE_PROJECTS              TABLE
-VOTERS                         TABLE
-ZAID1                          TABLE
-TEST134                        TABLE
-TEST135                        TABLE
-TEST136                        TABLE
-PARENT                         TABLE
-CHILD                          TABLE
-ITEMS                          TABLE
-ORDERS                         TABLE
-ORDER_ITEMS                    TABLE
-EMPLOYEES                      TABLE
-LONG_VS_CLOB                   TABLE
-VARCHAR2_TEST                  TABLE
-CHAR_TEST                      TABLE
-CHAR_VS_VARCHAR2               TABLE
-CLOB3                          TABLE
-NVARCHAR_TEST                  TABLE
-NCLOB_TEST                     TABLE
-CHILD3                         TABLE
-NUM_TEST2                      TABLE
-DATE_TEST                      TABLE
-NUM_TEST                       TABLE
-TIMESTAMP_TEST                 TABLE
-TIMESTAMP_TEST2                TABLE
-WEB_ORDERS                     TABLE
-SPORTS_SCHEDULE                TABLE
-CANDIDATE                      TABLE
-CANDIDATE2                     TABLE
-LAB_TEST                       TABLE
-EMP_COPY_TR                    TABLE
-BINARY_TEST                    TABLE
-BFILEDEMO                      TABLE
-ALTER_TEST                     TABLE
-ALTER_EMP_COPY                 TABLE
-TABLE1                         TABLE
-DATE_VS_TS                     TABLE
-COLLEGE                        TABLE
-QUALIFICATION                  TABLE
-STREAM                         TABLE
-COUNTRY                        TABLE
-STATE                          TABLE
-CITY                           TABLE
-ENQUIRY_MASTER                 TABLE
-STAFF                          TABLE
-COURSE1                        TABLE
-COURSE                         TABLE
-EMP_COPY_UPDATE                TABLE
-DEPT_COPY_UPDATE               TABLE
-BIN$QugLmuWYRJGPwfK+WwhAdQ==$0 TABLE
-EMP_COPY                       TABLE
-DEPT_COPY                      TABLE
-
-90 rows selected.
 
 SQL> desc college;
  Name                                                              Null?    Type
@@ -421,22 +18,6 @@ SQL> desc stream;
  STREAM_ID                                                         NOT NULL NUMBER(4)
  STREAM_NAME                                                       NOT NULL VARCHAR2(10)
 
-SQL> desc college_history;
-ERROR:
-ORA-04043: object college_history does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
-
-
-SQL> desc college_sem;
-ERROR:
-ORA-04043: object college_sem does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
-
-
-SQL> desc college_year;
-ERROR:
-ORA-04043: object college_year does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
 
 
 SQL> desc enquiry_master;
@@ -454,16 +35,6 @@ SQL> desc enquiry_master;
  JOB_PROFILE                                                       NOT NULL VARCHAR2(10)
  CITY_ID                                                                    NUMBER
 
-SQL> desc source_history;
-ERROR:
-ORA-04043: object source_history does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
-
-
-SQL> desc source_master;
-ERROR:
-ORA-04043: object source_master does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
 
 
 SQL> create table college_sem
@@ -472,7 +43,6 @@ SQL> create table college_sem
   4  sem_name varchar2(10) constraint sem_name_cannot_be_same_or_null unique not null
   5  );
 
-Table created.
 
 SQL> create table college_year
   2  (
@@ -480,26 +50,7 @@ SQL> create table college_year
   4  year_name varchar2(10) constraint year_name_cannot_be_same_or_null unique not null
   5  );
 
-Table created.
 
-SQL> create table college_history
-  2  (
-  3  enquiry_id references enquiry_master,
-  4  college_id references college,
-  5  date_of_change date,
-  6  sem_id references college_sem,
-  7  year_id references college_year,
-  8  qid references qualifiaction,
-  9  stream_id references stream);
-qid references qualifiaction,
-               *
-ERROR at line 8:
-ORA-00942: table or view does not exist
-Help: https://docs.oracle.com/error-help/db/ora-00942/
-
-
-SQL> ed
-Wrote file afiedt.buf
 
   1  create table college_history
   2  (
@@ -509,33 +60,12 @@ Wrote file afiedt.buf
   6  sem_id references college_sem,
   7  year_id references college_year,
   8  qid references  qualification,
-  9* stream_id references stream)
-SQL> /
-
-Table created.
-
-SQL> desc source_master;
-ERROR:
-ORA-04043: object source_master does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
+  9stream_id references stream)
 
 
-SQL> create table source_history
-  2  (
-  3  source_id references source_master,
-  4  enquiry_id references enquiry_master,
-  5  source_date_of_enquiry date primary key);
-source_id references source_master,
-                     *
-ERROR at line 3:
-ORA-00942: table or view does not exist
-Help: https://docs.oracle.com/error-help/db/ora-00942/
 
 
-SQL> desc source_master;
-ERROR:
-ORA-04043: object source_master does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
+
 
 
 SQL> create table source_master
@@ -544,7 +74,6 @@ SQL> create table source_master
   4  source_name varchar2(10) constraint source_name_cannot_be_null_or_same not null unique
   5  );
 
-Table created.
 
 SQL>  create table source_history
   2   (
@@ -552,7 +81,6 @@ SQL>  create table source_history
   4   enquiry_id references enquiry_master,
   5   source_date_of_enquiry date primary key);
 
-Table created.
 
 SQL> desc course;
  Name                                                              Null?    Type
@@ -561,56 +89,18 @@ SQL> desc course;
  COURSE_NAME                                                       NOT NULL VARCHAR2(10)
  FEE                                                               NOT NULL NUMBER(10)
 
-SQL> decs staff;
-SP2-0042: unknown command "decs staff" - rest of line ignored.
-Help: https://docs.oracle.com/error-help/db/sp2-0042/
+
 SQL> desc staff;
  Name                                                              Null?    Type
  ----------------------------------------------------------------- -------- --------------------------------------------
  STAFF_ID                                                          NOT NULL NUMBER(5)
  STAFF_NAME                                                        NOT NULL VARCHAR2(10)
 
-SQL> desc enquiry_handled;
-ERROR:
-ORA-04043: object enquiry_handled does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
 
 
-SQL> select * from cat
-  2  where table_name='ENQUIRY_HANDLED';
-
-no rows selected
-
-SQL> create table enquiry_handled
-  2  (
-  3  enquiry_id references enquiry_master on delete set null,
-  4  assigned_date_to_staff date primary key,
-  5  handled_enquiry_date date constraint handled_enquiry_date_cannot_be_null  not null,
-  6  fee_suggested number(10) constraint fee_suggested_cannot_be_null not null,
-  7  staff_status varchar2(10) constraint staff_status_can_only_be_in_Assigned_or_Not_Assigned
-  8  check( lower(staff_status) in('assigned','not assigned')) not null,
-  9  enquiry_status  varchar2(6) constraint enquiry_status_can_be_only_Open_or_Not_assigned
- 10  check(lower(enquiry_status) in('assigned','not assigned')) not null,
- 11  course_id references course on delete set null,
- 12  staff_id references staff on delete set null,
- 13  visited_staff varchar2(3) constraint visited_staff_can_only_be_yes_or_no
- 14  check(lower(visited_staff)in('yes','no')) not null,
- 15  registered_status varchar2(3) constraint registered_status_can_be_only_yes_or_no
- 16  check(lower(registered_status)in('yes','no')) not null,
- 17  close_date_of_enquiry date constraint close_date_of_enquiry_cannot_be_null_or_todays_date_or_use_sysdate
- 18  not null,
- 19  close_enquiry_status varchar2(6) constraint close_enquiry_status_can_be_manual_or_auto
- 20  check(lower(close_enquiry_status)in('manual','auto')) not null,
- 21  );
-)
-*
-ERROR at line 21:
-ORA-00904: : invalid identifier
-Help: https://docs.oracle.com/error-help/db/ora-00904/
 
 
-SQL> ed
-Wrote file afiedt.buf
+SQL> 
 
   1  create table enquiry_handled
   2  (
@@ -633,57 +123,8 @@ Wrote file afiedt.buf
  19  close_enquiry_status varchar2(6) constraint close_enquiry_status_can_be_manual_or_auto
  20  check(lower(close_enquiry_status)in('manual','auto')) not null
  21* )
-SQL> /
 
-Table created.
-
-SQL> create table follow_up
-  2  (
-  3  followup_id number(5) primary key ,staff_id references
-  4  .
-SQL> create table follow_up
-  2  (
-  3  followup_id number(5) primary key ,
-  4  staff_id references staff,
-  5  enquiry_id references enquiry_master,
-  6  status varchar2(15) constraint status_can_7_days_left_or_5_days_left_or_4_days_left_or_3_days_left_or_2_days_left_or_1_day_left
-  7  check(lower(status)in('7 days left','6 days left','5 days left','4 days left','3 days left','2 days left','1 days left')),
-  8  date_of_followup date constraint date_of_followup_cannot_be_null not null,
-  9  remark varchar2(30) default 'No remarks',
- 10  next_followup_date date constraint next_followup_date_cannot_be_null_or_use_sysdate_or_current_date
- 11  ,
- 12  );
-next_followup_date date constraint next_followup_date_cannot_be_null_or_use_sysdate_or_current_date
-                        *
-ERROR at line 10:
-ORA-02253: constraint specification not allowed here
-Help: https://docs.oracle.com/error-help/db/ora-02253/
-
-
-SQL> ed
-Wrote file afiedt.buf
-
-  1  create table follow_up
-  2  (
-  3  followup_id number(5) primary key ,
-  4  staff_id references staff,
-  5  enquiry_id references enquiry_master,
-  6  status varchar2(15) constraint status_can_7_days_left_or_5_days_left_or_4_days_left_or_3_days_left_or_2_days_left_or_1_day_left_without_underscore
-  7  check(lower(status)in('7 days left','6 days left','5 days left','4 days left','3 days left','2 days left','1 days left')),
-  8  date_of_followup date constraint date_of_followup_cannot_be_null not null,
-  9  remark varchar2(30) default 'No remarks',
- 10  next_followup_date date constraint next_followup_date_cannot_be_null_or_use_sysdate_or_current_date
- 11* )
- 12  /
-next_followup_date date constraint next_followup_date_cannot_be_null_or_use_sysdate_or_current_date
-                        *
-ERROR at line 10:
-ORA-02253: constraint specification not allowed here
-Help: https://docs.oracle.com/error-help/db/ora-02253/
-
-
-SQL> ed
-Wrote file afiedt.buf
+SQL> 
 
   1  create table follow_up
   2  (
@@ -814,10 +255,6 @@ SQL> desc state;
  STATE_NAME                                                        NOT NULL VARCHAR2(14)
  COUNTYR_D                                                                  NUMBER
 
-SQL> desc coutry;
-ERROR:
-ORA-04043: object coutry does not exist
-Help: https://docs.oracle.com/error-help/db/ora-04043/
 
 
 SQL> desc country;
