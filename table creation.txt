@@ -1,26 +1,10 @@
-Microsoft Windows [Version 10.0.22631.3880]
-(c) Microsoft Corporation. All rights reserved.
 
-C:\Users\Junaid>sqlplus
-
-SQL*Plus: Release 21.0.0.0.0 - Production on Thu Jul 11 14:38:32 2024
-Version 21.3.0.0.0
-
-Copyright (c) 1982, 2021, Oracle.  All rights reserved.
-
-Enter user-name: junaid/unisoft@orclpdb
-Last Successful login time: Wed Jul 10 2024 19:16:38 +05:30
-
-Connected to:
-Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production
-Version 21.3.0.0.0
 
 SQL> create table college
   2  (college_id number(3),
   3  college_name varchar2(20) constraint college_name_cannot_be_null not null,
   4  primary key(college_id));
 
-Table created.
 
 SQL> create table qualification
   2  (qid number(4),
@@ -28,27 +12,14 @@ SQL> create table qualification
   4  ,
   5  primary key(qid));
 
-Table created.
 
-SQL> create table stream
-  2  (stream_id number(4) primary key,
-  3  stream_name varchar2(10) constraint stream_name_cannot_be_null not null,
-  4  primary key(stream_id));
-primary key(stream_id))
-*
-ERROR at line 4:
-ORA-02260: table can have only one primary key
-
-
-SQL> ed
-Wrote file afiedt.buf
 
   1  create table stream
   2  (stream_id number(4) primary key,
-  3* stream_name varchar2(10) constraint stream_name_cannot_be_null not null)
+  3 stream_name varchar2(10) constraint stream_name_cannot_be_null not null)
 SQL> /
 
-Table created.
+
 
 SQL> create table college_history
   2  (enquiry_id number references.
@@ -83,169 +54,21 @@ SQL> create table country(
 
 Table created.
 
-SQL> create table state
-  2  (
-  3  state_id number(6) primary key,
-  4  state_name varchar2(14) constraint state_cannot_be_null not null,
-  5  references country);
-references country)
-           *
-ERROR at line 5:
-ORA-00902: invalid datatype
 
-
-SQL> ed
-Wrote file afiedt.buf
 
   1  create table state
   2  (
   3  state_id number(6) primary key,
   4  state_name varchar2(14) constraint state_cannot_be_null not null,
   5* countyr_d number references country)
-SQL> /
 
-Table created.
+
 
 SQL> create table city
   2  (city_id number(5) primary key,
   3  city_name varchar2(10) constraint city_cannot_be_null not null,
   4  state_id number references state);
 
-Table created.
-
-SQL> create table enquiry_master
-  2  (enquiry_id number(4) primary key,
-  3  name varchar2(10) constraint name_cannot_be_null not null,
-  4  phone_no number2(10) constraint phone_no_cannot_be_null not null
-  5  constraint phone_no_should_be_or_already_exists unique
-  6  constraint phone_no_should_be_10_digits check(length(phone_no)=10),
-  7  email_id varchar2(30) constraint email_format_is_not_valid check(email_id like'%@%.%')
-  8  not null,
-  9  address varchar2(30) constraint address_cannot_be_null not null,
- 10  gender varchar2(1) constraint Gender_should_be_in_M_F_O_form
- 11  check (upper(gender) in('M','F','O'),
- 12  age number(2) constraint enter_a_valid_age not null ,
- 13  working varchar2(3) constraint answer_in_yes_or_no check(upper(working)) in('YES','NO')
- 14  not null,
- 15  work_experiance varchar2(10) default '0 years,
- 16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17  city_id number references city);
-phone_no number2(10) constraint phone_no_cannot_be_null not null
-                *
-ERROR at line 4:
-ORA-00907: missing right parenthesis
-
-
-SQL> ed
-Wrote file afiedt.buf
-
-  1  create table enquiry_master
-  2  (enquiry_id number(4) primary key,
-  3  name varchar2(10) constraint name_cannot_be_null not null,
-  4  phone_no number(10) constraint phone_no_cannot_be_null not null
-  5  constraint phone_no_should_be_or_already_exists unique
-  6  constraint phone_no_should_be_10_digits check(length(phone_no)=10),
-  7  email_id varchar2(30) constraint email_format_is_not_valid check(email_id like'%@%.%')
-  8  not null,
-  9  address varchar2(30) constraint address_cannot_be_null not null,
- 10  gender varchar2(1) constraint Gender_should_be_in_M_F_O_form
- 11  check (upper(gender) in('M','F','O'),
- 12  age number(2) constraint enter_a_valid_age not null ,
- 13  working varchar2(3) constraint answer_in_yes_or_no check(upper(working)) in('YES','NO')
- 14  not null,
- 15  work_experiance varchar2(10) default '0 years,
- 16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17* city_id number references city)
-SQL> /
-check (upper(gender) in('M','F','O'),
-                                    *
-ERROR at line 11:
-ORA-00907: missing right parenthesis
-
-
-SQL> ed
-Wrote file afiedt.buf
-
-  1  create table enquiry_master
-  2  (enquiry_id number(4) primary key,
-  3  name varchar2(10) constraint name_cannot_be_null not null,
-  4  phone_no number(10) constraint phone_no_cannot_be_null not null
-  5  constraint phone_no_should_be_or_already_exists unique
-  6  constraint phone_no_should_be_10_digits check(length(phone_no)=10),
-  7  email_id varchar2(30) constraint email_format_is_not_valid check(email_id like'%@%.%')
-  8  not null,
-  9  address varchar2(30) constraint address_cannot_be_null not null,
- 10  gender varchar2(1) constraint Gender_should_be_in_M_F_O_form
- 11  check (upper(gender)) in('M','F','O'),
- 12  age number(2) constraint enter_a_valid_age not null ,
- 13  working varchar2(3) constraint answer_in_yes_or_no check(upper(working)) in('YES','NO')
- 14  not null,
- 15  work_experiance varchar2(10) default '0 years,
- 16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17* city_id number references city)
-SQL> /
-check (upper(gender)) in('M','F','O'),
-                    *
-ERROR at line 11:
-ORA-00920: invalid relational operator
-
-
-SQL> ed
-Wrote file afiedt.buf
-
-  1  create table enquiry_master
-  2  (enquiry_id number(4) primary key,
-  3  name varchar2(10) constraint name_cannot_be_null not null,
-  4  phone_no number(10) constraint phone_no_cannot_be_null not null
-  5  constraint phone_no_should_be_or_already_exists unique
-  6  constraint phone_no_should_be_10_digits check(length(phone_no)=10),
-  7  email_id varchar2(30) constraint email_format_is_not_valid check(email_id like'%@%.%')
-  8  not null,
-  9  address varchar2(30) constraint address_cannot_be_null not null,
- 10  gender varchar2(1) constraint Gender_should_be_in_M_F_O_form
- 11  check (upper(gender) in('M','F','O')),
- 12  age number(2) constraint enter_a_valid_age not null ,
- 13  working varchar2(3) constraint answer_in_yes_or_no check(upper(working)) in('YES','NO')
- 14  not null,
- 15  work_experiance varchar2(10) default '0 years,
- 16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17* city_id number references city)
-SQL> /
-working varchar2(3) constraint answer_in_yes_or_no check(upper(working)) in('YES','NO')
-                                                                       *
-ERROR at line 13:
-ORA-00920: invalid relational operator
-
-
-SQL> ed
-Wrote file afiedt.buf
-
-  1  create table enquiry_master
-  2  (enquiry_id number(4) primary key,
-  3  name varchar2(10) constraint name_cannot_be_null not null,
-  4  phone_no number(10) constraint phone_no_cannot_be_null not null
-  5  constraint phone_no_should_be_or_already_exists unique
-  6  constraint phone_no_should_be_10_digits check(length(phone_no)=10),
-  7  email_id varchar2(30) constraint email_format_is_not_valid check(email_id like'%@%.%')
-  8  not null,
-  9  address varchar2(30) constraint address_cannot_be_null not null,
- 10  gender varchar2(1) constraint Gender_should_be_in_M_F_O_form
- 11  check (upper(gender) in('M','F','O')),
- 12  age number(2) constraint enter_a_valid_age not null ,
- 13  working varchar2(3) constraint answer_in_yes_or_no check(upper(working) in('YES','NO'))
- 14  not null,
- 15  work_experiance varchar2(10) default '0 years,
- 16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17* city_id number references city)
-SQL> /
-work_experiance varchar2(10) default '0 years,
-                                     *
-ERROR at line 15:
-ORA-01756: quoted string not properly terminated
-
-
-SQL> ed
-Wrote file afiedt.buf
 
   1  create table enquiry_master
   2  (enquiry_id number(4) primary key,
@@ -263,35 +86,14 @@ Wrote file afiedt.buf
  14  not null,
  15  work_experiance varchar2(10) default '0 years',
  16  job_profile varchar2(10) constraint job_profile_cannot_be_null_Enter_intership_or_type_beginner not null,
- 17* city_id number references city)
-SQL> /
+ 17 city_id number references city)
 
-Table created.
 
 SQL> create table staff
   2  (
   3  staff_id number(5) primary key,
   4  staff_name varchar2(10) constraint staff_name_cannot_be_null not null);
 
-Table created.
-
-SQL> create table course
-  2  (
-  3  course_id number(5) primary key,
-  4  course_name varchar2(10) constraint course_name_cannot_be_null
-  5  not null
-  6  constraint course_should_be_unique unique,
-  7  fee number(10) constraint fee_cannot_be_null not null
-  8  );
-create table course
-             *
-ERROR at line 1:
-ORA-00955: name is already used by an existing object
-
-
-SQL> rename course to course1;
-
-Table renamed.
 
 SQL>  create table course
   2   (
@@ -302,6 +104,4 @@ SQL>  create table course
   7   fee number(10) constraint fee_cannot_be_null not null
   8   );
 
-Table created.
 
-SQL>
